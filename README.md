@@ -1,13 +1,13 @@
-# Uber Fare Prediction — Spatial-Temporal Modeling
+# Uber Fare Prediction - Spatial-Temporal Modeling
 
 ## Business Impact
 
 A machine learning pipeline that predicts NYC Uber fare amounts with **~$4.32 average error** (~80 cents better than a baseline linear model), enabling ride-hailing platforms to set transparent, data-driven pricing and helping riders estimate costs before booking.
 
-- **Pricing transparency** — Riders get reliable fare estimates upfront, reducing post-trip disputes and increasing trust in the platform.
-- **Operational efficiency** — Accurate fare prediction reduces revenue leakage from underpriced trips and customer friction from overpriced ones.
-- **Demand insights** — EDA reveals clear morning and evening rush-hour peaks, informing surge pricing strategy and driver allocation.
-- **Geographic intelligence** — Pickup density heatmaps identify high-demand zones in Manhattan, supporting fleet positioning decisions.
+- **Pricing transparency** - Riders get reliable fare estimates upfront, reducing post-trip disputes and increasing trust in the platform.
+- **Operational efficiency** - Accurate fare prediction reduces revenue leakage from underpriced trips and customer friction from overpriced ones.
+- **Demand insights** - EDA reveals clear morning and evening rush-hour peaks, informing surge pricing strategy and driver allocation.
+- **Geographic intelligence** - Pickup density heatmaps identify high-demand zones in Manhattan, supporting fleet positioning decisions.
 
 ## Results
 
@@ -18,7 +18,7 @@ A machine learning pipeline that predicts NYC Uber fare amounts with **~$4.32 av
 | XGBoost | ~$4.55 | ~0.77 |
 | **Tuned Random Forest** | **~$4.32** | **~0.80** |
 
-> RMSE is in dollars — it represents the average amount the model's fare prediction is off by on unseen trips.
+> RMSE is in dollars - it represents the average amount the model's fare prediction is off by on unseen trips.
 
 **Key finding:** Trip distance alone accounts for ~80%+ of predictive importance and carries a Pearson correlation of ~0.82 with fare amount. Temporal features (hour, weekday, rush hour) contribute meaningfully but are secondary.
 
@@ -29,7 +29,7 @@ A machine learning pipeline that predicts NYC Uber fare amounts with **~$4.32 av
 ```
 uber-fare-prediction/
 ├── data/
-│   └── uber.csv                  # Dataset (see source below — not committed to Git)
+│   └── uber.csv                  # Dataset (see source below - not committed to Git)
 ├── notebooks/
 │   └── full_analysis.ipynb       # Original exploratory notebook
 ├── src/
@@ -50,16 +50,16 @@ uber-fare-prediction/
 
 ## Dataset
 
-**Source:** [Kaggle — Uber Fares Dataset](https://www.kaggle.com/datasets/yasserh/uber-fares-dataset)
+**Source:** [Kaggle - Uber Fares Dataset](https://www.kaggle.com/datasets/yasserh/uber-fares-dataset)
 
 Place the downloaded `uber.csv` file inside the `data/` folder before running.
 
 The dataset contains ~200,000 NYC Uber rides with:
-- `fare_amount` — trip fare in USD (target variable)
-- `pickup_datetime` — timestamp of trip start
-- `pickup_longitude`, `pickup_latitude` — pickup coordinates
-- `dropoff_longitude`, `dropoff_latitude` — dropoff coordinates
-- `passenger_count` — number of passengers
+- `fare_amount` - trip fare in USD (target variable)
+- `pickup_datetime` - timestamp of trip start
+- `pickup_longitude`, `pickup_latitude` - pickup coordinates
+- `dropoff_longitude`, `dropoff_latitude` - dropoff coordinates
+- `passenger_count` - number of passengers
 
 ---
 
