@@ -30,8 +30,6 @@ A machine learning pipeline that predicts NYC Uber fare amounts with **~$4.32 av
 uber-fare-prediction/
 ├── data/
 │   └── uber.csv                  # Dataset (see source below — not committed to Git)
-├── notebooks/
-│   └── full_analysis.ipynb       # Original exploratory notebook
 ├── src/
 │   ├── loader.py                 # Data loading & cleaning pipeline
 │   ├── features.py               # Haversine distance, time features, rush-hour flag
